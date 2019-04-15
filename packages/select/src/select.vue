@@ -17,18 +17,16 @@
           type="info"
           @close="deleteTag($event, selected[0])"
           disable-transitions>
-            <span class="el-select__tags-text">{{ selected[0].currentLabel }}</span>
+          <span class="el-select__tags-text">{{ selected[0].currentLabel }}</span>
         </el-tag>
-        <template v-if="selected.length > 1">
           <el-tag
             v-if="selected.length > 1"
             :closable="false"
             :size="collapseTagSize"
             type="info"
             disable-transitions>
-              <span class="el-select__tags-text">+ {{ selected.length - 1 }}</span>
+            <span class="el-select__tags-text">+ {{ selected.length - 1 }}</span>
           </el-tag>
-        </template>
       </span>
       <transition-group @after-leave="resetInputHeight" v-if="!collapseTags">
         <el-tag
@@ -40,8 +38,8 @@
           type="info"
           @close="deleteTag($event, item)"
           disable-transitions>
-            <slot name="multiprefix" v-bind:item="item"></slot>
-            <span class="el-select__tags-text">{{ item.currentLabel }}</span>
+          <slot name="multiprefix" v-bind:item="item"></slot>
+          <span class="el-select__tags-text">{{ item.currentLabel }}</span>
         </el-tag>
       </transition-group>
 
