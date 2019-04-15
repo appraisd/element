@@ -17,7 +17,6 @@
           type="info"
           @close="deleteTag($event, selected[0])"
           disable-transitions>
-            <slot name="multiprefix" v-bind:item="selected[0]"></slot>
             <span class="el-select__tags-text">{{ selected[0].currentLabel }}</span>
         </el-tag>
         <template v-if="selected.length > 1">
@@ -27,7 +26,6 @@
             :size="collapseTagSize"
             type="info"
             disable-transitions>
-              <slot name="multiprefix" v-bind:item="selected[selected.length - 1]"></slot>
               <span class="el-select__tags-text">+ {{ selected.length - 1 }}</span>
           </el-tag>
         </template>
