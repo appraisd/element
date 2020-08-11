@@ -408,6 +408,7 @@
             if (this.multiple) {
               this.$refs.input.focus();
             } else {
+              this.$refs.input.focus();
               if (!this.remote) {
                 this.broadcast('ElOption', 'queryChange', '');
                 this.broadcast('ElOptionGroup', 'queryChange');
